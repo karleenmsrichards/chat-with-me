@@ -45,7 +45,9 @@ const useAuth = () => {
   useEffect(() => {
     async function fetchClientId() {
       try {
-        const response = await axios.get("http://localhost:3001/clientId");
+        const response = await axios.get(
+          "https://chat-with-me-l0np.onrender.com"
+        );
         const { clientId } = response.data;
         setClientId(clientId);
       } catch (error) {
